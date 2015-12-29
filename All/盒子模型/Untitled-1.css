@@ -1,0 +1,531 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	margin: 0;
+	padding: 0
+}
+html {
+	font-size: 62.5%;
+	background: #FFF;
+	font-weight: lighter;
+	-webkit-font-smoothing: antialiased;
+	font-family: Exo, 'Microsoft YaHei', 'WenQuanYi MicroHei', sans-serif
+}
+body {
+	background: #FFF;
+	padding: 0 10px;
+	text-align: center;
+	margin-bottom: 150px;
+	-webkit-transition: top 200ms ease;
+	transition: top 200ms ease
+}
+@font-face {
+	font-family: Exo;
+	font-style: normal;
+	font-weight: 100;
+	src: local("Exo Thin"), local("Exo-Thin"), url(http://hongyan.cqupt.edu.cn/kebiao/ExoThin.woff) format("woff")
+}
+@font-face {
+	font-family: Exo;
+	font-style: normal;
+	font-weight: 400;
+	src: local("Exo Regular"), local("Exo-Regular"), url(http://hongyan.cqupt.edu.cn/kebiao/ExoRegular.woff) format("woff")
+}
+ol, ul {
+	list-style: none;
+	list-style-position: inside
+}
+h1 {
+	color: #6868db;
+	font-size: 1.8rem;
+	font-family: Exo, 'Microsoft YaHei', 'WenQuanYi MicroHei', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	font-weight: lighter;
+	font-size: 2.8rem;
+	margin: 20px auto
+}
+#loading {
+	-webkit-font-smoothing: antialiased;
+	font-family: Exo, 'Microsoft YaHei', 'WenQuanYi MicroHei', sans-serif;
+	font-size: 1.3rem;
+	color: #81b0ff
+}
+#kebiao .class-corner:before {
+	content: "\5207\6362";
+	position: relative;
+	color: #81b0ff;
+	top: -19px
+}
+#kebiao .class-corner:after {
+	content: ' ';
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	position: relative;
+	top: -43px;
+	border-left: 1px solid #81b0ff;
+	border-bottom: 1px solid #81b0ff;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg)
+}
+#kebiao .class-corner.xq:after {
+	top: -34px
+}
+#d-week {
+	font-size: 2.3rem;
+	font-weight: lighter
+}
+#kebiao {
+	opacity: 0;
+	-webkit-transition: opacity 500ms ease;
+	-o-transition: opacity 500ms ease;
+	transition: opacity 500ms ease;
+	max-width: 1000px;
+	margin: 0 auto;
+	border-color: #FFF;
+	margin-bottom: 30px
+}
+#kebiao th, #kebiao td {
+	text-align: center;
+	border: 1px solid #FFF
+}
+#kebiao .class-corner {
+	width: 3%;
+	min-width: 34px;
+	cursor: pointer
+}
+#kebiao th {
+	width: 12.5%;
+	padding: 4px 0
+}
+#kebiao th.weekend {
+	width: 5%;
+	max-width: 12.5%;
+	white-space: normal
+}
+#kebiao .weekend .class-item {
+	color: #56b0e0
+}
+#kebiao tr {
+	height: 12.5%;
+	overflow: auto;
+	-webkit-transition: height 500ms ease-out;
+	-o-transition: height 500ms ease-out;
+	transition: height 500ms ease-out
+}
+.c {
+	border-radius: 1px;
+	cursor: pointer
+}
+.class-item {
+	font-size: 1.3rem;
+	color: #FFF;
+	-webkit-transition: font-size .2s ease-out;
+	transition: font-size .2s ease-out;
+	padding: 3px;
+	display: none;
+	position: relative
+}
+.class-item .course {
+	font-size: 1.6rem
+}
+.class-item p {
+	margin-bottom: 4px
+}
+#kebiao .weekend {
+	background-color: #d6f3fe;
+	border-color: #d6f3fe!important
+}
+#kebiao .class-period {
+	color: #6868db;
+	font-size: 2rem;
+	font-weight: lighter;
+	font-family: Exo
+}
+.class-weekday, .class-corner {
+	color: #81b0ff;
+	font-size: 1.5rem;
+	white-space: nowrap
+}
+#kebiao .class-corner {
+	font-size: 1.2rem;
+	color: #6868db
+}
+.class-morning.c {
+	background-color: #56b0e0
+}
+.class-afternoon.c {
+	background-color: #ff6e72
+}
+.class-night.c {
+	background-color: #6ad284
+}
+.ts {
+	font-size: 1.3rem
+}
+.rank-container {
+	opacity: 0;
+	color: #64b0e3;
+	font-size: 1.6rem;
+	position: relative;
+	text-align: left;
+	margin: 0 auto;
+	max-width: 950px;
+	padding: 0 15px
+}
+.class-ave, .class-rank, .class-beat, .class-level, .jiathis_txt {
+	display: inline-block;
+	margin-right: 60px;
+	margin-bottom: 20px;
+	background-image: url(http://hongyan.cqupt.edu.cn/kebiao/k-sprite.png);
+	background-repeat: no-repeat;
+	padding-left: 45px;
+	min-height: 21px
+}
+.class-ave {
+	background-position: -8px -9px
+}
+.class-rank {
+	background-position: -8px -48px
+}
+.class-beat {
+	background-position: -8px -126px
+}
+.class-level {
+	background-position: -7px -165px
+}
+.jiathis_txt {
+	background-position: -8px -89px
+}
+.class-share {
+	margin-top: 21px
+}
+#jiathis_weixin_modal {
+	margin: -180px 0 0 -180px!important
+}
+.jiathis_txt {
+	padding-left: 44px!important;
+	display: inline-block!important;
+	font-size: 1.6rem!important
+}
+.jtico_qzone, .jtico_weixin, .jtico_renren, .jtico_tsina {
+	width: 50px!important;
+	background-image: url(http://hongyan.cqupt.edu.cn/kebiao/k-sprite.png)!important;
+	position: relative;
+	top: -11px;
+	width: 25px!important
+}
+#d-qzone .jtico_qzone {
+	background-position: -8px -235px!important;
+	height: 40px!important
+}
+#d-wx .jtico_weixin {
+	background-position: -8px -195px!important;
+	height: 40px!important
+}
+#d-rr .jtico_renren {
+	background-position: -8px -312px!important;
+	height: 40px!important
+}
+#d-tsina .jtico_tsina {
+	background-position: -8px -273px!important;
+	height: 40px!important
+}
+.cyxbs {
+	display: inline-block;
+	position: absolute;
+	bottom: -124px;
+	left: 0;
+	right: 0;
+	width: 160px;
+	height: 50px;
+	margin: 0 auto;
+	background: #ffa73a;
+	line-height: 50px;
+	text-align: center;
+	font-size: 1.4rem;
+	color: #FFF;
+	text-decoration: none;
+	border-radius: 4px
+}
+.jiathis_style {
+	display: none
+}
+.animation {
+	-webkit-animation: showKb 300ms ease-in-out;
+	animation: showKb 300ms ease-in-out
+}
+.clickHereShareWx {
+	position: fixed;
+	right: 10px;
+	top: 12px;
+	font-size: 1.3rem;
+	color: #3caeea;
+	display: none
+}
+.clickHereShareWx:before {
+	content: ' ';
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	right: 16px;
+	top: -6px;
+	border-left: 1px solid #81b0ff;
+	border-bottom: 1px solid #81b0ff;
+	-webkit-transform: rotate(135deg);
+	transform: rotate(135deg)
+}
+.doudou {
+	-webkit-animation: doudou 300ms ease-in-out;
+	animation: doudou 300ms ease-in-out;
+	-webkit-animation-iteration-count: 3;
+	animation-iteration-count: 3
+}
+body {
+	top: 20px
+}
+.searchXh {
+	position: absolute;
+	right: 0;
+	top: -28px;
+	margin-right: 2%
+}
+.searchXh input {
+	width: 9rem;
+	height: 15px;
+	padding: 5px;
+	outline: 0;
+	border: 1px solid #CCC;
+	border-radius: 5px;
+	color: #81b0ff;
+	font-size: 15px
+}
+.searchXh .searchIt {
+	text-decoration: none;
+	display: inline-block;
+	width: 20px;
+	height: 15px;
+	padding: 5px;
+	background-color: #ffa73a;
+	position: relative;
+	border-radius: 5px;
+	color: white;
+	font-size: 15px;
+	line-height: 15px
+}
+#kebiao .dd2:after {
+	-webkit-animation: doudou2 300ms ease-in-out 3;
+	animation: doudou2 300ms ease-in-out 3
+}
+#kebiao .dd2:before {
+	-webkit-animation: doudou 300ms ease-in-out 3;
+	animation: doudou 300ms ease-in-out 3
+}
+.c {
+	position: relative
+}
+.class-multi:after {
+	content: ' ';
+	position: absolute;
+	right: 2px;
+	bottom: 2px;
+	width: 0;
+	height: 0;
+	border: 10px solid #FFF;
+	border-top: 10px solid transparent;
+	border-left: 10px solid transparent
+}
+#kebiao .class-multi {
+	-webkit-transition: height 200ms ease-in-out
+}
+#kebiao .class-multi-fixed {
+	display: block
+}
+#kebiao .class-multi:hover .class-item {
+	display: block
+}
+.weekend .course {
+	font-size: 1.3rem
+}
+.week-btns a {
+	display: inline-block;
+	width: 110px;
+	height: 30px;
+	border-radius: 3px;
+	color: #56b0e0;
+	text-decoration: none;
+	line-height: 30px;
+	font-size: 1.7rem;
+	margin: 5px 25px 20px;
+	border: 1px solid #56b0e0
+}
+.week-btns a:hover {
+	background: #56b0e0;
+	color: #FFF
+}
+@media only screen and (max-width:850px) {
+.class-item {
+	font-size: 1.3rem
+}
+.class-item .course {
+	font-size: 1.5rem
+}
+.weekend .course {
+	font-size: 1.3rem
+}
+}
+@media only screen and (max-width:700px) {
+.class-item {
+	font-size: 1.2rem
+}
+.class-item .course {
+	font-size: 1.15rem
+}
+}
+@media only screen and (max-width:600px) {
+.class-item {
+	font-size: 1.25rem
+}
+.class-item .course {
+	font-size: 1.35rem
+}
+.weekend .course {
+	font-size: 1rem
+}
+#activity-detail {
+	padding: 0
+}
+}
+@media only screen and (max-width:500px) {
+.class-item {
+	font-size: 1.15rem
+}
+.class-item .course {
+	font-size: 1.35rem
+}
+.weekend .course {
+	font-size: 1rem
+}
+#kebiao .class-period {
+	font-size: 1.6rem
+}
+}
+@media only screen and (max-width:450px) {
+.teacher {
+	display: none
+}
+}
+@media only screen and (max-width:400px) {
+.class-item {
+	font-size: 1.1rem;
+	padding: 3px 2px
+}
+.class-item .course {
+	font-size: 1.3rem
+}
+.weekend .course {
+	font-size: 1rem
+}
+.class-item p {
+	margin-bottom: 2px
+}
+#kebiao .class-period {
+	font-size: 1.3rem
+}
+}
+@-webkit-keyframes scaleout {
+from {
+-webkit-transform:scale(1)
+}
+to {
+	-webkit-transform: scale(1.2)
+}
+}
+@keyframes scaleout {
+from {
+transform:scale(1)
+}
+to {
+	transform: scale(1.2)
+}
+}
+@-webkit-keyframes showKb {
+0% {
+-webkit-transform:scale3D(1, 1, 1)
+}
+50% {
+-webkit-transform:scale3D(1, 1, 1.5)
+}
+100% {
+-webkit-transform:scale3D(1, 1, 1)
+}
+}
+@keyframes showKb {
+0% {
+transform:scale(1)
+}
+50% {
+transform:scale(1.2)
+}
+100% {
+transform:scale(1)
+}
+}
+@-webkit-keyframes doudou {
+0% {
+-webkit-transform:translate(0, 5px)
+}
+25% {
+-webkit-transform:translate(0, 0)
+}
+50% {
+-webkit-transform:translate(0, -5px)
+}
+100% {
+-webkit-transform:translate(0, 0)
+}
+}
+@keyframes doudou {
+0% {
+transform:translate(0, 5px)
+}
+25% {
+transform:translate(0, 0)
+}
+50% {
+transform:translate(0, -5px)
+}
+100% {
+transform:translate(0, 0)
+}
+}
+@-webkit-keyframes doudou2 {
+0% {
+webkit-transform:translate(0, 5px) rotate(-45deg)
+}
+25% {
+-webkit-transform:translate(0, 0) rotate(-45deg)
+}
+50% {
+-webkit-transform:translate(0, -5px) rotate(-45deg)
+}
+100% {
+-webkit-transform:translate(0, 0) rotate(-45deg)
+}
+}
+@keyframes doudou2 {
+0% {
+transform:translate(0, 5px) rotate(-45deg)
+}
+25% {
+transform:translate(0, 0) rotate(-45deg)
+}
+50% {
+transform:translate(0, -5px) rotate(-45deg)
+}
+100% {
+transform:translate(0, 0) rotate(-45deg)
+}
+}

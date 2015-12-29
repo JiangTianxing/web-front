@@ -1,0 +1,136 @@
+<!doctype html> 
+<html>     
+<head>         
+<title>小葵花妈妈课堂开课啦</title>  
+<meta name="author" >        
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="./css/impress.css">   
+<link rel="stylesheet" href="iconfont/demo.css">
+<link rel="stylesheet" href="iconfont/iconfont.css">
+<link rel="stylesheet" href="./css/index.css"> 
+</head>     
+<body>   
+	<div id="impress">
+		<div id="overview" class="step"data-scale="5"></div>
+		<div class="step"  data-x="0" data-y="0"> 
+		   <h1>先说说作业</h1>
+		</div>
+		<div class="step" data-x="800" data-y="0">
+			<h2><b>要求:</b></h2>
+			<h3>CSS和js编码规范</h3>
+		</div>
+		<div class="step" data-x="400" data-y="900" data-scale="0.5" data-rotate="90">
+			<h2>思考&优化</h2>
+			<h2>
+				<a id="demo" href="demo-talkingRoom/index.html">demo</a>
+			</h2>
+		</div>
+
+		<div class="step" data-x="-800" data-y="-1000" data-rotate-z="90">
+			<h3>回忆一下HTML<br>CSS</h3>
+		</div>
+		<div class="step" data-x="-1200" data-y="-1000" data-rotate-z="90">
+			<h3>HTML两种元素</h3>
+			<p>块级元素</p>
+			<p>行内元素</p>
+			<p>他们各有什么特性</p>
+		</div>
+		<div class="step" data-x="-1600" data-y="-1000" data-rotate-z="90">
+			<h3>CSS</h3>
+			<p>选择器</p>
+			<p>优先级</p>
+		</div>
+		<div class="step" data-x="-2500" data-y="-1000" data-rotate-z="90">
+			<p>效率:</p>
+			<p>
+			读取选择器原则是从右到左
+			<br>选择器效率排行
+			<br>	    1. ID选择器
+				<br>    2. 类选择器
+				    <br>3. 标签选择器
+				    <br>4. 相邻选择器
+				    <br>5. 子选择器
+				    <br>6. 后代选择器
+				    <br>7. 通配符选择器
+				    <br>8. 属性选择器
+				    <br>9. 伪类选择器
+			</p>
+		</div>
+		<div class="step" data-x="-3300" data-y="-1000" data-rotate-z="90">
+			<p>建议:</p>
+			<br>不使用标签类名修饰id
+			<br>不要使用标签名修饰类
+			<br>关于后代选择器和子选择器：避免使用后代选择器,非要用的话建议用子选择器代替,但子选择器也要慎用
+			</p>
+		</div>
+		<div class="step" data-x="-4000" data-y="-1000" data-rotate-z="90">
+			<p>CSS书写顺序:</p>
+			1. 显示属性
+			2. 盒模型
+			3. 排版
+			4. 文字
+		</div>
+		<div class="step" data-x="-4200" data-y="-1000" data-z="-20000" data-rotate-z="300">
+			<h2>盒模型</h2>
+		</div>
+		<div class="step" data-x="-4200" data-y="-1000" data-z="-20000" data-rotate-z="300">
+			<h2>盒模型</h2>
+		</div>
+		<div class="step" data-x="0" data-y="-1000" data-rotate="-90">
+			<h2>定位</h2>
+			<p>普通流</p>
+			<p>浮动</p>
+			<p>相对定位</p>
+			<p>绝对定位和定位上下文</p>
+		</div>
+
+		<div class="step" data-x="-500"  data-scale="0.5">
+			<h2>字体</h2>
+			<p>字体族</p>
+			<p>serif</p>
+			<p>sans-serif</p>
+			<p>monospace</p>
+		</div>
+		<div class="step" data-x="-500" data-y="200"data-scale="0.5">
+			<h2>iconfont?</h2>
+		</div>
+		<div class="step" data-x="-500"  data-y="500" data-scale="0.5">
+			<div style="text-align: center">
+				<img id="QQ-icon" src="img/QQ-icon.jpg" style="height:220px; width:220px;">
+			</div>
+		</div>
+		<div class="step" data-x="-500" data-y="800"data-scale="0.5">
+			<ul class="icon_lists clear" style="text-align: center">
+               <i class="icon iconfont" style="font-size: 100px;">&#xe699;</i>
+               <i class="icon iconfont">&#xe62f;</i>
+               <i class="icon iconfont">&#xe602;</i>
+               <i class="icon iconfont">&#xf0068;</i>
+               <i class="icon iconfont">&#xe741;</i>
+	       </ul>
+		</div>
+		<div class="step" data-x="800" data-y="-1500" data-rotate="300">
+			<h1 style="color: red;">最后: 切图!!</h1>
+		</div>
+		<div class="step" data-x="1000" data-y="-1000">
+			<h2>怎么使用PS抠图</h2>
+			<h3>＜PS傻瓜式抠图教程＞</h3>
+		</div>
+<script type="text/javascript" src="./js/impress.js"></script>
+<script>
+(function(doc){
+	impress().init();
+	function $(selector) {
+	    return doc.querySelector(selector);	
+	}
+	
+	$("#QQ-icon").addEventListener("click", function() {
+		this.style.width = parseInt(this.style.width) + 50 +  "px"
+		this.style.height = parseInt(this.style.height) + 50 +  "px"
+	});
+	$(".icon").addEventListener("click", function() {
+		this.style.fontSize = parseInt(this.style.fontSize) + 50 +  "px"
+	});
+})(document);
+</script>
+</body> 
+</html>

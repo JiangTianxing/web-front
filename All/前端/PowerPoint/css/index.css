@@ -1,0 +1,34 @@
+body {
+	background-color: #d7d7d7;
+	color: #333;
+	font-family: "Microsoft YaHei", 'Open Sans', Arial, sans-serif;
+}
+.step {
+	width: 900px;
+    font-size: 48px;
+    line-height: 1.5;
+    padding: 40px;
+}
+h1,
+h2,
+h3 {
+	text-align: center;
+}
+h1 {
+	font-size: 100px;
+}
+h2 {
+	font-size: 90px;
+}
+h3 {
+	font-size: 80px;
+}
+a {
+	color: inherit;
+}
+p {
+	text-align: center;
+}
+#demo {
+	font-size: 80px;
+}
